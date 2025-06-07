@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Crud System</title>
+    <link rel="stylesheet" href="font othom and bootstrab/css/all.min.css">
+    <link rel="stylesheet" href="font othom and bootstrab/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+       <div class="header">
+ <i class="fa-solid fa-desktop"></i><h6 class="d-inline">Devicse Management</h6>
+</div>
+
+<form class="form p-3">
+    <div class="mb-2">
+        <label for="productName" class="d-block mb-2">New Product Name</label>
+        <input type="text" oninput="validationName()" class="form-control" id="productName" placeholder="Enter Product Name">
+        <div class="alert alert-danger d-none" id="nameError"> your word must be start with capital and between 4 and 8 letters</div>
+
+    </div>
+    <div class="mb-2">
+        <label for="productPrice" class="d-block mb-2">Enter Product Price</label>
+        <input type="text" oninput="validationPrice()" class="form-control" id="productPrice" placeholder="Enter Product Price">
+        <div class="alert alert-danger d-none" id="priceError">The price must be between 1000 and 10000</div>
+
+
+    </div>
+    <div class="mb-2">
+        <label for="productType" class="d-block mb-2">Enter Product Type</label>
+        <input oninput="validationType()" type="text" class="form-control" id="productType" placeholder="Enter Product Type">
+        <div class="alert alert-danger d-none" id="typeError">Type must be Mobile or Screen or Watch only</div>
+
+
+    </div>
+    <div class="mb-2">
+        <label for="productDes" class="d-block mb-2">Enter Product Description</label>
+        <input oninput="validationDes()" type="text" class="form-control" id="productDes" placeholder="Enter Product Description">
+        <div class="alert alert-danger d-none" id="desError">Description must be between 3-500 words </div>
+    </div>
+    <div class="button py-4 text-center">
+        <button onclick="add()" class="btn btn-dark text-light w-50 rounded-4 mx-auto text-center" id="addProduct">Add Product</button>
+        <input oninput="productSearch()" class="form-control mt-4 w-50 mx-auto" placeholder="Search" id="search" type="text">
+    </div>
+
+<table class="mt-5 w-100">
+    <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Type</td>
+        <td>Description</td>
+        <td>Action</td>
+    </tr>
+    <tbody id="tableBody">
+    </tbody>
+</table>
+</form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    <script src="font othom and bootstrab/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
